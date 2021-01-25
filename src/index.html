@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>尚靖凡的简历</title>
+</head>
+
+<body>
+  <style id="style"></style>
+  <style>
+    #html {
+      word-break: break-all;
+    }
+
+    #div1 {
+      position: fixed;
+      top: 30px;
+      right: 30%;
+    }
+
+    #div1::before {
+      content: '';
+      display: block;
+    }
+
+    #div1::after {
+      content: '';
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      #divWrapper {
+        border: 1px solid red;
+        height: 50vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      #div1 {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+      }
+
+      #html {
+        border: 1px solid blue;
+        height: 50vh;
+      }
+    }
+  </style>
+  <div id="html"></div>
+  <div id="divWrapper">
+    <div id="div1"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
