@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#html {
+  word-break: break-all;
+}
+
+#div1 {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#div1::before {
+  content: "";
+  display: block;
+}
+
+#div1::after {
+  content: "";
+  display: block;
+}
+
+@media (max-width: 500px) {
+  #divWrapper {
+    height: 50vh;
+  }
+
+  #div1 {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+
+  #html {
+    height: 50vh;
+    overflow: auto;
+    background: black;
+    color: #ffffff;
+  }
+}
