@@ -1,14 +1,14 @@
 let html = document.querySelector("#html")
 let style = document.querySelector("#style");
 
-let string = `/*你好，我是paopao
+let string = `/*你好，我是
  *接下来我要展示一下我的前端功底
  *首先准备一个div
  */
 #div1{
   border: 1px solid red;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
 }
 /*接下来展示一个八卦图，
  *把div首先变成圆
@@ -18,13 +18,12 @@ let string = `/*你好，我是paopao
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   border: none;
 } 
-/*八卦由阴阳而生，
- *一黑一白 
- **/
+/*八卦由阴阳而生*/
 #div1{
   border-radius: 50%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 } 
+/* 阴中有阳，阳中有阴*/
 #div1::before{
   width: 50%;
   height: 50%;
@@ -57,7 +56,8 @@ let step = () => {
     }
 
     html.innerHTML = string2;
-    window.scrollTo(0, 99999);
+    window.scrollTo(0, 99999); //
+    html.scrollTo(0, 99999); //
     style.innerHTML = string.substring(0, n);
     n += 1;
     if (n < string.length) {
@@ -66,7 +66,7 @@ let step = () => {
   }, 10)
 }
 
-// step();
+step();
 
 // setTimeout(() => {
 //   style.innerHTML = `

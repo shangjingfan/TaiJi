@@ -10,14 +10,21 @@
 
 <body>
   <style id="style"></style>
-  <style>#html {
+  <style>* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #html {
       word-break: break-all;
     }
 
     #div1 {
       position: fixed;
       top: 30px;
-      right: 30%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     #div1::before {
@@ -34,20 +41,21 @@
       #divWrapper {
         border: 1px solid red;
         height: 50vh;
-        position: absolute;
-        bottom: 0;
-        left: 0;
       }
 
       #div1 {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
       }
 
       #html {
         border: 1px solid blue;
         height: 50vh;
+        overflow: auto;
       }
     }</style>
   <div id="html"></div>
