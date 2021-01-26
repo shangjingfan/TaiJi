@@ -5,11 +5,17 @@ let string = `/*你好，我是
  *接下来我要展示一下我的前端功底
  *首先准备一个div
  */
+#div1{
+  border: 1px solid red;
+  width: 400px;
+  height: 400px;
+}
+@media (max-width: 500px){
   #div1{
-    border: 1px solid red;
     width: 200px;
     height: 200px;
   }
+}
 /*接下来展示一个八卦图，
  *把div首先变成圆
  **/
@@ -50,7 +56,7 @@ let step = () => {
     if (string[n] === '\n') {
       string2 += '<br>'; //如果是回车，就不照搬；
     } else if (string[n] === ' ') {
-      string2 += '&nbsp;'
+      string2 += '&nbsp;';
     } else {
       string2 += string[n];//如果不是回车，就照搬
     }
